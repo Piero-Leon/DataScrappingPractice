@@ -2,6 +2,7 @@ package com.example.datascrappingpractice;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class ParseAdapter extends RecyclerView.Adapter<ParseAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ParseAdapter.ViewHolder holder, int position) {
         ParseItem parseItem = parseItems.get(position);
         holder.textView.setText(parseItem.getTitle());
+
         Picasso.get().load(parseItem.getImgUrl()).into(holder.imageView);
 
     }
